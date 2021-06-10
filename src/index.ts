@@ -22,6 +22,6 @@ export class User {
   }
 
   isOverEighteen(): boolean {
-    return this.age > 18 ? true : false
+    return this.age >= 18
   }
 }
