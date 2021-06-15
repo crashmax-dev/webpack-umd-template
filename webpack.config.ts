@@ -15,6 +15,7 @@ module.exports = {
     globalObject: 'this'
   },
   devServer: {
+    open: true,
     https: true,
     port: 8080,
     writeToDisk: true,
