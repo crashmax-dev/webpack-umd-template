@@ -1,4 +1,4 @@
-interface UserParams {
+interface IUser {
   firstName: string
   lastName: string
   age: number
@@ -9,9 +9,7 @@ export class User {
   private lastName: string
   private age: number
 
-  constructor(params: UserParams) {
-    const { firstName, lastName, age } = params
-
+  constructor({ firstName, lastName, age }: IUser) {
     this.firstName = firstName
     this.lastName = lastName
     this.age = age
