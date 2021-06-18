@@ -12,6 +12,7 @@
     "declaration": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "strictPropertyInitialization": false,
     "rootDir": "src",
     "outDir": "dist"
