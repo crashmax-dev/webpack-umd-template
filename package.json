@@ -1,44 +1,46 @@
 {
-    "name": "webpack-umd-template",
-    "version": "1.0.0",
-    "description": "webpack-umd-template",
-    "scripts": {
-        "dev": "webpack server --node-env development",
-        "build": "webpack --node-env production --progress",
-        "lint": "eslint src/**/*.ts",
-        "lint:fix": "eslint src/**/*.ts --fix",
-        "test": "jest"
-    },
-    "author": {
-        "url": "https://crashmax.ru",
-        "email": "sys@crashmax.ru",
-        "name": "Vitalij Ryndin"
-    },
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/crashmax-dev/webpack-umd-template.git"
-    },
-    "devDependencies": {
-        "@babel/core": "^7.15.5",
-        "@babel/preset-env": "^7.15.6",
-        "@types/copy-webpack-plugin": "^8.0.1",
-        "@types/jest": "^27.0.2",
-        "@types/webpack": "^4.41.31",
-        "@types/webpack-dev-server": "^3.11.6",
-        "@typescript-eslint/eslint-plugin": "^4.31.2",
-        "@typescript-eslint/parser": "^4.31.2",
-        "babel-loader": "^8.2.2",
-        "clean-webpack-plugin": "^3.0.0",
-        "copy-webpack-plugin": "^6.2.1",
-        "eslint": "^7.32.0",
-        "jest": "^27.2.1",
-        "ts-jest": "^27.0.5",
-        "ts-loader": "^8.0.14",
-        "ts-node": "^10.2.1",
-        "typescript": "^4.4.3",
-        "webpack": "^4.46.0",
-        "webpack-cli": "^4.8.0",
-        "webpack-dev-server": "^3.11.2"
-    }
+  "name": "webpack-umd-template",
+  "version": "1.1.0",
+  "description": "webpack-umd-template",
+  "scripts": {
+    "dev": "webpack server --config webpack/webpack.dev.js",
+    "build": "webpack --progress --config webpack/webpack.prod.js",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "test": "jest"
+  },
+  "author": {
+    "url": "https://crashmax.ru",
+    "email": "sys@crashmax.ru",
+    "name": "Vitalij Ryndin"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crashmax-dev/webpack-umd-template.git"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@types/copy-webpack-plugin": "^8.0.1",
+    "@types/css-font-loading-module": "^0.0.6",
+    "@types/jest": "^27.0.2",
+    "@types/webpack": "^5.28.0",
+    "@types/webpack-dev-server": "^4.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
+    "@typescript-eslint/parser": "^4.32.0",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "eslint": "^7.32.0",
+    "jest": "^27.2.1",
+    "ts-jest": "^27.0.5",
+    "ts-loader": "^9.2.6",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3",
+    "webpack": "^5.55.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.3.0",
+    "webpack-merge": "^5.8.0"
+  }
 }

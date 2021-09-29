@@ -4,9 +4,13 @@
     "plugin:@typescript-eslint/recommended"
   ],
   "ignorePatterns": [
-    "dist/*",
-    "public/*"
+    "dist",
+    "public"
   ],
+  "env": {
+    "browser": true,
+    "es6": true
+  },
   "parserOptions": {
     "ecmaVersion": 12,
     "sourceType": "module"
