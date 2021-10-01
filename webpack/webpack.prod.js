@@ -3,6 +3,7 @@ const common = require('./webpack.common')
 const { paths } = require('./webpack.config')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
+/** @type {import('webpack').Configuration} */
 module.exports = merge(common, {
   mode: 'production',
   devtool: false,

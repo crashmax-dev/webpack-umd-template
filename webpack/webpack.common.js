@@ -1,6 +1,7 @@
 const { paths } = require('./webpack.config')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
+/** @type {import('webpack').Configuration} */
 module.exports = {
   entry: paths.entry,
   output: {
