@@ -4,6 +4,7 @@ const CopyPlugin = require('copy-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const RemovePlugin = require('remove-files-webpack-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const ErrorOverlayPlugin = require('error-overlay-webpack-plugin')
 
 const { name, version } = require('./package.json')
 const banner = `${name}@${version}`
@@ -19,7 +20,7 @@ module.exports = (env, args) => ({
     globalObject: 'this',
     umdNamedDefine: true
   },
-  devtool: args.mode === 'development' ? 'source-map' : false,
+  devtool: args.mode === 'development' ? 'cheap-module-source-map' : false,
   devServer: {
     port: 3000,
     open: true,
@@ -59,6 +60,7 @@ module.exports = (env, args) => ({
     ]
   },
   plugins: [
+    new ErrorOverlayPlugin(),
     new BannerPlugin(banner),
     new RemovePlugin({
       before: {
