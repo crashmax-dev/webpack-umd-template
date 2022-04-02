@@ -1,7 +1,3 @@
 {
-  "extends": "@crashmax/eslint-config",
-  "env": {
-    "node": true,
-    "browser": true
-  }
+  "extends": "@crashmax/eslint-config"
 }

@@ -1,4 +1,5 @@
-/test
-/dist
 /public
-/webpack
+/dist
+**/*.js
+**/*.test.ts
+**/*.config.ts

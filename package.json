@@ -1,12 +1,18 @@
 {
   "name": "webpack-umd-template",
-  "version": "1.1.0",
   "description": "webpack-umd-template",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "browserslist": [
+    "defaults"
+  ],
   "scripts": {
-    "dev": "webpack server --config webpack/webpack.dev.js",
-    "build": "webpack --progress --config webpack/webpack.prod.js",
-    "lint": "eslint --ext ts src",
-    "lint:fix": "eslint --fix --ext ts src",
+    "dev": "webpack serve --mode=development",
+    "build": "webpack --mode=production && npm run types",
+    "types": "tsc",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
     "test": "jest"
   },
   "author": {
@@ -20,25 +26,21 @@
     "url": "git+https://github.com/crashmax-dev/webpack-umd-template.git"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/preset-env": "^7.16.4",
-    "@crashmax/eslint-config": "^1.0.1",
-    "@types/copy-webpack-plugin": "^8.0.1",
-    "@types/jest": "^27.0.3",
-    "@types/webpack": "^5.28.0",
-    "@types/webpack-dev-server": "^4.5.0",
-    "babel-loader": "^8.2.3",
-    "clean-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "^10.0.0",
-    "jest": "^27.3.1",
-    "terser-webpack-plugin": "^5.2.5",
-    "ts-jest": "^27.0.7",
-    "ts-loader": "^9.2.6",
-    "ts-node": "^10.4.0",
-    "typescript": "^4.5.2",
-    "webpack": "^5.64.1",
-    "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.5.0",
-    "webpack-merge": "^5.8.0"
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@crashmax/eslint-config": "^1.1.0",
+    "@types/jest": "^27.4.1",
+    "babel-loader": "^8.2.4",
+    "copy-webpack-plugin": "^10.2.4",
+    "css-minimizer-webpack-plugin": "^3.4.1",
+    "jest": "^27.5.1",
+    "remove-files-webpack-plugin": "^1.5.0",
+    "terser-webpack-plugin": "^5.3.1",
+    "ts-jest": "^27.1.4",
+    "typescript": "^4.6.3",
+    "webpack": "^5.71.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
   }
 }
